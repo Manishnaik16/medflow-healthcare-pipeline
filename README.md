@@ -3,31 +3,9 @@
 
 ---
 
-## What changed from v1 (DBFS fix)
-
-Databricks workspaces with **Unity Catalog** enabled block public DBFS root access (`dbfs:/`).
-The pipeline is now **4 notebooks** that work entirely with Delta tables — no raw file storage needed.
-Data is generated in Python, converted to Spark DataFrames, and written straight to Bronze Delta tables.
-This is actually closer to real production pipelines.
-
----
-
-## How to import into Databricks Community Edition
-
-1. Go to **https://community.cloud.databricks.com** and sign in
-2. Create a cluster (Runtime 13.x LTS or higher)
-3. In Workspace, create a folder called `MedFlow`
-4. Import each `.py` file — Databricks converts them to notebooks automatically
-5. Run in order: `01 → 02 → 03 → 04`
-
-> For `%run` in Notebook 04, update the paths to match your workspace location.
-> Example: `%run "/Users/you@email.com/MedFlow/01_setup_and_data_generation"`
-
----
-
 ## Notebook Guide
 
-| # | Notebook | What you learn |
+| # | Notebook | 
 |---|---|---|
 | 01 | Setup & Data Generation | `spark.createDataFrame`, Delta writes, `DESCRIBE HISTORY`, time travel |
 | 02 | Silver Cleaning | PySpark transforms, `fillna`, `dropDuplicates`, Window + `lag()`, 3-table joins |
