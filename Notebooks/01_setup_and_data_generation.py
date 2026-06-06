@@ -3,11 +3,6 @@
 # MAGIC # 🏥 MedFlow Analytics Pipeline
 # MAGIC ## Notebook 1: Setup & Synthetic Data Generation
 # MAGIC
-# MAGIC **Fix:** Unity Catalog workspaces disable the public DBFS root (`dbfs:/`).
-# MAGIC We generate data directly as Spark DataFrames and write straight to Delta tables —
-# MAGIC no intermediate CSV/JSON files needed. This is actually closer to real pipelines
-# MAGIC where Bronze = "landed as-is from source system".
-# MAGIC
 # MAGIC **Tables created:**
 # MAGIC - `medflow.bronze_patients`
 # MAGIC - `medflow.bronze_admissions`
