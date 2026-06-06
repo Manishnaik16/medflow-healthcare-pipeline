@@ -79,10 +79,4 @@ GOLD LAYER  (aggregated KPIs, optimized for analytics)
 
 ---
 
-## Resume Bullet Points
 
-> *"Built an end-to-end healthcare analytics pipeline on Databricks using the Medallion Architecture (Bronze/Silver/Gold), implementing PySpark transformations, Delta Lake with ACID transactions, and SparkSQL aggregations to derive patient readmission KPIs."*
-
-> *"Engineered a 30-day patient readmission detection algorithm using PySpark Window functions (lag over partitioned time-ordered data), enabling identification of high-risk wards."*
-
-> *"Implemented a data quality validation framework with automated assertions across all pipeline layers, catching schema drift, null violations, and invalid metric ranges before they reach Gold."*
